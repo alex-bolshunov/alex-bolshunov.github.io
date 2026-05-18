@@ -10,6 +10,7 @@ export default function App() {
       description: 'Analyzed 2M+ customer transactions to identify purchasing patterns and seasonal trends, resulting in 23% increase in targeted marketing ROI.',
       tools: ['SQL', 'Python', 'Tableau'],
       imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxkYXRhJTIwZGFzaGJvYXJkcyUyMGFuYWx5dGljcyUyMGNoYXJ0c3xlbnwxfHx8fDE3Nzg5NjAyOTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      link: '#',
     },
     {
       title: 'Sales Performance Dashboard',
@@ -65,6 +66,7 @@ export default function App() {
                 description={project.description}
                 tools={project.tools}
                 imageUrl={project.imageUrl}
+                link={project.link}
               />
             ))}
           </div>

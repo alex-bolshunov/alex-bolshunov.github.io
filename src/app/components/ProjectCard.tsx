@@ -5,9 +5,10 @@ interface ProjectCardProps {
   description: string;
   tools: string[];
   imageUrl: string;
+  link?: string;
 }
 
-export default function ProjectCard({ title, description, tools, imageUrl }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tools, imageUrl, link }: ProjectCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -36,7 +37,7 @@ export default function ProjectCard({ title, description, tools, imageUrl }: Pro
         </p>
 
         {/* Tool Tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-6">
           {tools.map((tool, index) => (
             <span
               key={index}
@@ -46,6 +47,15 @@ export default function ProjectCard({ title, description, tools, imageUrl }: Pro
             </span>
           ))}
         </div>
+
+        {/* Action Button */}
+        <a
+          href={link || '#'}
+          className="inline-block px-5 py-2.5 bg-[#007A87] text-white text-sm font-medium rounded-md hover:bg-[#005c66] transition-colors shadow-sm"
+          onClick={(e) => e.stopPropagation()}
+        >
+          View Details
+        </a>
       </div>
     </div>
   );
